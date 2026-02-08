@@ -60,7 +60,8 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 35, 66, 0.98);
+           background: rgba(10, 35, 66, 0.98);
+
             backdrop-filter: blur(10px);
             z-index: 1000;
             border-bottom: 2px solid var(--primary-green);
@@ -145,6 +146,9 @@
             gap: 5px;
             cursor: pointer;
             z-index: 1001;
+            background: none;
+            border: none;
+            padding: 5px;
         }
         
         .mobile-menu-toggle span {
@@ -152,12 +156,26 @@
             height: 3px;
             background: var(--bg-white);
             transition: all 0.3s ease;
+            display: block;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
         }
         
         /* Hero Section */
         .hero {
             margin-top: 92px;
-            background: linear-gradient(135deg, var(--primary-navy) 0%, #1B6B93 100%);
+            background: linear-gradient(135deg, rgba(10, 35, 66, 0.95) 0%, rgba(27, 107, 147, 0.95) 100%), 
+                        url('hero-background.jpg') center/cover no-repeat;
             color: var(--bg-white);
             padding: 6rem 2rem 4rem;
             position: relative;
@@ -203,11 +221,47 @@
             display: inline-block;
         }
         
-        .hero-text p {
+        .hero-tagline {
             font-size: 1.25rem;
             margin-bottom: 2rem;
             color: rgba(255,255,255,0.9);
             line-height: 1.8;
+            font-weight: 500;
+        }
+        
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .mv-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .mv-card:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: var(--primary-green);
+            transform: translateY(-5px);
+        }
+        
+        .mv-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary-green);
+            margin-bottom: 0.75rem;
+            font-family: 'Work Sans', sans-serif;
+        }
+        
+        .mv-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.9);
         }
         
         .hero-stats {
@@ -251,6 +305,7 @@
             display: flex;
             gap: 1.5rem;
             margin-top: 2rem;
+            flex-wrap: wrap;
         }
         
         .btn-primary, .btn-secondary {
@@ -262,6 +317,7 @@
             transition: all 0.3s ease;
             display: inline-block;
             border: 2px solid;
+            text-align: center;
         }
         
         .btn-primary {
@@ -395,6 +451,7 @@
             color: var(--primary-green);
             font-weight: 700;
             font-size: 1.2rem;
+            flex-shrink: 0;
         }
         
         .view-curriculum-btn {
@@ -491,6 +548,7 @@
             justify-content: center;
             font-size: 1.5rem;
             font-weight: 700;
+            flex-shrink: 0;
         }
         
         .module-title h3 {
@@ -525,80 +583,103 @@
             content: '→';
             color: var(--primary-green);
             font-weight: 700;
+            flex-shrink: 0;
         }
         
-        /* Partnership Section */
-        .partnerships {
+        /* Collaboration Section */
+        .collaboration {
             padding: 6rem 2rem;
-            background: var(--bg-white);
-        }
-        
-        .partnership-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 3rem;
-            align-items: center;
-        }
-        
-        .mou-showcase {
             background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
         }
         
-        .mou-showcase img {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-        }
-        
-        .mou-info h3 {
-            font-size: 1.75rem;
-            color: var(--primary-navy);
-            margin-bottom: 1rem;
-        }
-        
-        .mou-info p {
-            color: var(--text-light);
-            line-height: 1.8;
-        }
-        
-        .partners-list {
-            display: grid;
-            gap: 1.5rem;
-        }
-        
-        .partner-category h3 {
-            font-size: 1.5rem;
-            color: var(--primary-navy);
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--primary-green);
-        }
-        
-        .partner-logos {
+        .collaboration-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
+            gap: 2rem;
+            margin-top: 3rem;
         }
         
-        .partner-logo {
+        .collaboration-card {
             background: var(--bg-white);
-            padding: 1.5rem;
-            border-radius: 8px;
+            border-radius: 12px;
+            padding: 2rem;
             border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
             text-align: center;
-            font-weight: 600;
+        }
+        
+        .collaboration-card:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+        
+        .collaboration-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .collaboration-card h3 {
+            font-size: 1.3rem;
             color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+        
+        .collaboration-type {
+            color: var(--primary-green);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Partnership Photos */
+        .partnership-photos {
+            margin-top: 4rem;
+        }
+        
+        .photos-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .photo-card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--border-color);
             transition: all 0.3s ease;
         }
         
-        .partner-logo:hover {
+        .photo-card:hover {
             border-color: var(--primary-green);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+        
+        .photo-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .photo-caption {
+            padding: 1.5rem;
+        }
+        
+        .photo-caption h4 {
+            font-size: 1.1rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+        
+        .photo-caption p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.5;
         }
         
         /* Companies Grid */
@@ -676,6 +757,27 @@
             font-size: 4rem;
             color: var(--primary-green);
             font-weight: 700;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .team-photo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--primary-green);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--accent-teal) 100%);
         }
         
         .team-info {
@@ -774,6 +876,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             margin-top: 1rem;
+            width: 100%;
         }
         
         .submit-btn:hover {
@@ -862,73 +965,6 @@
             color: rgba(255,255,255,0.6);
         }
         
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .hero-content,
-            .partnership-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .programs-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .companies-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .mobile-menu-toggle {
-                display: flex;
-            }
-            
-            .nav-links {
-                position: fixed;
-                top: 92px;
-                left: -100%;
-                flex-direction: column;
-                background: var(--primary-navy);
-                width: 100%;
-                padding: 2rem;
-                gap: 1.5rem;
-                transition: left 0.3s ease;
-            }
-            
-            .nav-links.active {
-                left: 0;
-            }
-            
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-stats,
-            .module-topics {
-                grid-template-columns: 1fr;
-            }
-            
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .companies-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .partner-logos {
-                grid-template-columns: 1fr;
-            }
-        }
-        
         /* Animations */
         .fade-in {
             opacity: 0;
@@ -949,6 +985,263 @@
         .stagger-4 { animation-delay: 0.4s; }
         .stagger-5 { animation-delay: 0.5s; }
         .stagger-6 { animation-delay: 0.6s; }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-content,
+            .partnership-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .companies-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .collaboration-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            /* Mobile Navigation */
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 92px;
+                left: -100%;
+                flex-direction: column;
+                background: var(--primary-navy);
+                width: 100%;
+                padding: 2rem;
+                gap: 1.5rem;
+                transition: left 0.3s ease;
+                max-height: calc(100vh - 92px);
+                overflow-y: auto;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                width: 100%;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+            
+            .cta-button {
+                display: block;
+                text-align: center;
+            }
+            
+            /* Hero Section */
+            .hero {
+                padding: 3rem 1.5rem 2rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1rem;
+            }
+            
+            .mission-vision {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .mv-card {
+                padding: 1.25rem;
+            }
+            
+            .mv-card h3 {
+                font-size: 1.1rem;
+            }
+            
+            .mv-card p {
+                font-size: 0.9rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                padding: 1rem;
+            }
+            
+            /* Section Headers */
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .section-header p {
+                font-size: 1rem;
+            }
+            
+            /* Programs */
+            .programs-overview,
+            .collaboration,
+            .partnerships,
+            .companies,
+            .team,
+            .enrollment {
+                padding: 4rem 1.5rem;
+            }
+            
+            .program-header {
+                padding: 1.5rem;
+            }
+            
+            .program-header h3 {
+                font-size: 1.5rem;
+            }
+            
+            .program-preview {
+                padding: 1.5rem;
+            }
+            
+            /* Curriculum Detail */
+            .curriculum-detail {
+                padding: 4rem 1.5rem;
+            }
+            
+            .curriculum-header {
+                padding: 2rem 1.5rem;
+            }
+            
+            .curriculum-header h2 {
+                font-size: 2rem;
+            }
+            
+            .module-card {
+                padding: 1.5rem;
+            }
+            
+            .module-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            .module-title h3 {
+                font-size: 1.5rem;
+            }
+            
+            .module-topics {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Collaboration */
+            .collaboration-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .photos-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            /* Partnerships */
+            .partnership-content {
+                gap: 2rem;
+            }
+            
+            .partner-logos {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Companies */
+            .companies-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            /* Team */
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-photo {
+                height: 250px;
+            }
+            
+            /* Form */
+            .form-container {
+                padding: 2rem 1.5rem;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Footer */
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo-img {
+                height: 50px;
+            }
+            
+            .nav-container {
+                padding: 0.75rem 1rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 1.75rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+            
+            .stat-number {
+                font-size: 1.75rem;
+            }
+            
+            .program-icon {
+                font-size: 2.5rem;
+            }
+            
+            .module-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+            
+            .collaboration-icon {
+                font-size: 2.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -956,15 +1249,15 @@
     <nav id="navbar">
         <div class="nav-container">
             <img src="logo.png" alt="Future Labs Africa" class="logo-img">
-            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" onclick="showSection('home')">Home</a></li>
                 <li><a href="#programs" onclick="showSection('programs')">Programs</a></li>
-                <li><a href="#partnerships" onclick="showSection('partnerships')">Partnerships</a></li>
+                <li><a href="#collaboration" onclick="showSection('collaboration')">Collaborations</a></li>
                 <li><a href="#companies">Our Partners</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -982,11 +1275,22 @@
                     <span class="highlight">AI & Tech Talent</span><br>
                     for a Digital Africa
                 </h1>
-                <p>
-                    Partner with Future Labs Africa to access a pipeline of highly skilled, 
-                    job-ready professionals trained in LLM Engineering, Agentic AI, Full-Stack Development, 
-                    DevOps, and cutting-edge technologies.
+                <p class="hero-tagline">
+                    We turn passion into profession by training future innovators in customer care and 
+                    software development. Learn the skills, build your future, change the game.
                 </p>
+                
+                <div class="mission-vision">
+                    <div class="mv-card">
+                        <h3>🎯 Our Mission</h3>
+                        <p>To train and launch the next generation of skilled, future-ready African professionals through hands-on learning, industry-driven programs, and real-world experience.</p>
+                    </div>
+                    <div class="mv-card">
+                        <h3>🚀 Our Vision</h3>
+                        <p>To become Africa's leading technology education and innovation hub, driving global competitiveness, digital inclusion, and sustainable growth through empowered tech talent.</p>
+                    </div>
+                </div>
+                
                 <div class="hero-buttons">
                     <a href="#enrollment" class="btn-primary">Hire Our Graduates</a>
                     <a href="#programs" onclick="showSection('programs')" class="btn-secondary">View Programs</a>
@@ -1078,8 +1382,27 @@
                     </div>
                 </div>
 
-                <!-- DevOps & Cloud -->
+                <!-- Full-Stack C# Program -->
                 <div class="program-card fade-in stagger-4">
+                    <div class="program-header">
+                        <div class="program-icon">🔷</div>
+                        <h3>Full-Stack C# Development</h3>
+                        <p>Specialize in enterprise-grade .NET applications and C# development</p>
+                    </div>
+                    <div class="program-preview">
+                        <ul class="preview-list">
+                            <li>C# & .NET Core Mastery</li>
+                            <li>ASP.NET MVC & Web API</li>
+                            <li>Entity Framework & LINQ</li>
+                            <li>Blazor & Modern UI</li>
+                            <li>Azure Cloud Integration</li>
+                        </ul>
+                        <button class="view-curriculum-btn" onclick="showCurriculum('fullstack-csharp')">View Full Curriculum</button>
+                    </div>
+                </div>
+
+                <!-- DevOps & Cloud -->
+                <div class="program-card fade-in stagger-5">
                     <div class="program-header">
                         <div class="program-icon">☁️</div>
                         <h3>DevOps & Cloud Engineering</h3>
@@ -1096,9 +1419,138 @@
                         <button class="view-curriculum-btn" onclick="showCurriculum('devops')">View Full Curriculum</button>
                     </div>
                 </div>
+
+                <!-- QA & QE Program -->
+                <div class="program-card fade-in stagger-6">
+                    <div class="program-header">
+                        <div class="program-icon">✅</div>
+                        <h3>Quality Assurance & Quality Engineering</h3>
+                        <p>Ensure software quality through comprehensive testing methodologies</p>
+                    </div>
+                    <div class="program-preview">
+                        <ul class="preview-list">
+                            <li>Manual & Automated Testing</li>
+                            <li>Selenium, Cypress & Test Frameworks</li>
+                            <li>API & Performance Testing</li>
+                            <li>CI/CD Integration</li>
+                            <li>Test Strategy & Quality Metrics</li>
+                        </ul>
+                        <button class="view-curriculum-btn" onclick="showCurriculum('qa')">View Full Curriculum</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Collaboration Section -->
+    <section class="collaboration" id="collaboration">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">Collaborations & Partnerships</div>
+                <h2>University & Institution Partnerships</h2>
+                <p>
+                    We collaborate with leading educational institutions across Kenya to expand access to 
+                    quality tech education and create pathways for student success.
+                </p>
+            </div>
+            <div class="collaboration-grid">
+                <div class="collaboration-card fade-in stagger-1">
+                    <div class="collaboration-icon">🏛️</div>
+                    <h3>PC Kinyanjui Technical Training Institute</h3>
+                    <div class="collaboration-type">Technical Training Partner</div>
+                </div>
+                
+                <div class="collaboration-card fade-in stagger-2">
+                    <div class="collaboration-icon">🎓</div>
+                    <h3>Premier College of Social Work and Community Development</h3>
+                    <div class="collaboration-type">Training & Community Development Partner</div>
+                </div>
+                
+                <div class="collaboration-card fade-in stagger-3">
+                    <div class="collaboration-icon">🏛️</div>
+                    <h3>Dedan Kimathi University of Technology</h3>
+                    <div class="collaboration-type">Training Partner </div>
+                </div>
+                
+                <div class="collaboration-card fade-in stagger-4">
+                    <div class="collaboration-icon">🎓</div>
+                    <h3>Murang'a University of Technology</h3>
+                    <div class="collaboration-type">Training Partner</div>
+                </div>
+                
+                <div class="collaboration-card fade-in stagger-5">
+                    <div class="collaboration-icon">🏛️</div>
+                    <h3>Kirinyaga University</h3>
+                    <div class="collaboration-type">Training Partner</div>
+                </div>
+                
+                <div class="collaboration-card fade-in stagger-6">
+                    <div class="collaboration-icon">🎓</div>
+                    <h3>Embu University</h3>
+                    <div class="collaboration-type">Training Partner</div>
+                </div>
+                
+                <div class="collaboration-card fade-in">
+                    <div class="collaboration-icon">🏛️</div>
+                    <h3>Laikipia University</h3>
+                    <div class="collaboration-type">Training Partner</div>
+                </div>
+                
+                <div class="collaboration-card fade-in">
+                    <div class="collaboration-icon">🎓</div>
+                    <h3>Chuka University</h3>
+                    <div class="collaboration-type">Training Partner</div>
+                </div>
+       
+            </div>
+            
+            <!-- Partnership Photos Section -->
+            <div class="partnership-photos">
+                <div class="section-header" style="margin-top: 4rem;">
+                    <div class="section-tag">Our Journey Together</div>
+                    <h2>Partnership Moments</h2>
+                    <p>Celebrating our collaborations through MOU signings, training sessions, and community impact</p>
+                </div>
+                
+                <div class="photos-grid">
+                    <div class="photo-card">
+                        <img src="partnership-photo-1.JPG" alt="MOU Signing Ceremony">
+                        <div class="photo-caption">
+                            <h4>MOU Signing Ceremonies</h4>
+                            <p>Formalizing partnerships with leading institutions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-card">
+                        <img src="partnership-photo-2.jpeg" alt="Training Session">
+                        <div class="photo-caption">
+                            <h4>Hands-On Training</h4>
+                            <p>Students engaged in practical tech learning</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-card">
+                        <img src="partnership-photo-3.jpg" alt="Graduation Ceremony">
+                        <div class="photo-caption">
+                            <h4>Graduation & Success</h4>
+                            <p>Celebrating our graduates' achievements</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-card">
+                        <img src="partnership-photo-4.jpg" alt="Community Outreach">
+                        <div class="photo-caption">
+                            <h4>Community Impact</h4>
+                            <p>Extending tech education to different communities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Detail Sections (LLM, Agentic, Full-Stack, DevOps remain the same as original) -->
+    <!-- I'll include the new curriculum sections for Full-Stack C# and QA/QE -->
 
     <!-- LLM Engineering Curriculum Detail -->
     <section class="curriculum-detail" id="curriculum-llm">
@@ -1438,7 +1890,7 @@
         </div>
     </section>
 
-    <!-- Full-Stack Curriculum Detail -->
+    <!-- Full-Stack Development Curriculum Detail -->
     <section class="curriculum-detail" id="curriculum-fullstack">
         <div class="section-container">
             <a href="#programs" class="back-btn" onclick="showSection('programs')">← Back to Programs</a>
@@ -1598,7 +2050,7 @@
         </div>
     </section>
 
-    <!-- DevOps Curriculum Detail -->
+    <!-- DevOps & Cloud Curriculum Detail -->
     <section class="curriculum-detail" id="curriculum-devops">
         <div class="section-container">
             <a href="#programs" class="back-btn" onclick="showSection('programs')">← Back to Programs</a>
@@ -1776,81 +2228,352 @@
         </div>
     </section>
 
-    <!-- Partnerships Section -->
-    <section class="partnerships" id="partnerships">
+    <!-- Full-Stack C# Curriculum Detail -->
+    <section class="curriculum-detail" id="curriculum-fullstack-csharp">
         <div class="section-container">
-            <div class="section-header">
-                <div class="section-tag">Our Partnerships</div>
-                <h2>Building the Future Together</h2>
-                <p>
-                    We collaborate with leading organizations, educational institutions, and government 
-                    to create opportunities and drive impact across Africa.
+            <a href="#programs" class="back-btn" onclick="showSection('programs')">← Back to Programs</a>
+            <div class="curriculum-header">
+                <div class="program-icon" style="font-size: 4rem; margin-bottom: 1rem;">🔷</div>
+                <h2>Full-Stack C# Development Curriculum</h2>
+                <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9);">
+                    Master enterprise-grade .NET applications with C# from backend to frontend
                 </p>
             </div>
             
-            <div class="partnership-content">
-                <div class="mou-showcase">
-                    <img src="training-photo.jpg" alt="Future Labs Africa Training Session" style="max-width: 100%; height: auto;">
-                    <div class="mou-info">
-                        <h3>Memorandum of Understanding (MOU) Signings</h3>
-                        <p>
-                            We've formalized partnerships with multiple institutions and organizations through 
-                            official MOU signings. These collaborations enable us to expand our reach, deliver 
-                            quality training, and create direct employment pathways for our graduates.
-                        </p>
-                        <p style="margin-top: 1rem;">
-                            <strong>Recent MOU Partners include:</strong> PC Kinyanjui Technical Training Institute, 
-                            Kenyatta University, and various corporate partners committed to talent development.
-                        </p>
+            <div class="curriculum-modules">
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">01</div>
+                        <div class="module-title">
+                            <h3>C# Programming Fundamentals</h3>
+                            <p class="module-duration">Week 1-2</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">C# Syntax & Data Types</div>
+                        <div class="topic-item">OOP Principles</div>
+                        <div class="topic-item">Collections & Generics</div>
+                        <div class="topic-item">Exception Handling</div>
+                        <div class="topic-item">LINQ Fundamentals</div>
+                        <div class="topic-item">Async/Await Programming</div>
                     </div>
                 </div>
-                
-                <div class="partners-list">
-                    <div class="partner-category">
-                        <h3>🏛️ Educational Institutions</h3>
-                        <div class="partner-logos">
-                            <div class="partner-logo">Kenyatta University</div>
-                            <div class="partner-logo">PC Kinyanjui TT Institute</div>
-                            <div class="partner-logo">eMobilis Institute</div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">02</div>
+                        <div class="module-title">
+                            <h3>.NET Core & ASP.NET Core</h3>
+                            <p class="module-duration">Week 3-5</p>
                         </div>
                     </div>
-                    
-                    <div class="partner-category">
-                        <h3>🤝 Corporate Partners</h3>
-                        <div class="partner-logos">
-                            <div class="partner-logo">The Jitu</div>
-                            <div class="partner-logo">ONQ Kenya</div>
-                            <div class="partner-logo">Trout Tree Hotel</div>
+                    <div class="module-topics">
+                        <div class="topic-item">.NET Core Architecture</div>
+                        <div class="topic-item">Dependency Injection</div>
+                        <div class="topic-item">Middleware Pipeline</div>
+                        <div class="topic-item">Configuration Management</div>
+                        <div class="topic-item">Logging & Monitoring</div>
+                        <div class="topic-item">ASP.NET Core MVC</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">03</div>
+                        <div class="module-title">
+                            <h3>Web API Development</h3>
+                            <p class="module-duration">Week 6-7</p>
                         </div>
                     </div>
-                    
-                    <div class="partner-category">
-                        <h3>🏢 Government & Public Sector</h3>
-                        <div class="partner-logos">
-                            <div class="partner-logo">County Govt of Nyeri</div>
-                            <div class="partner-logo">KETRACO</div>
-                            <div class="partner-logo">Women Enterprise Fund</div>
+                    <div class="module-topics">
+                        <div class="topic-item">RESTful API Design</div>
+                        <div class="topic-item">API Controllers & Routing</div>
+                        <div class="topic-item">Model Validation</div>
+                        <div class="topic-item">Authentication & JWT</div>
+                        <div class="topic-item">API Documentation (Swagger)</div>
+                        <div class="topic-item">Versioning & Best Practices</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">04</div>
+                        <div class="module-title">
+                            <h3>Entity Framework Core</h3>
+                            <p class="module-duration">Week 8-9</p>
                         </div>
                     </div>
-                    
-                    <div class="partner-category">
-                        <h3>💼 International Partnerships</h3>
-                        <div class="partner-logos">
-                            <div class="partner-logo">US Embassy Kenya</div>
-                            <div class="partner-logo">Beijing Sifang Automation</div>
-                            <div class="partner-logo">United Nations</div>
+                    <div class="module-topics">
+                        <div class="topic-item">Code-First & Database-First</div>
+                        <div class="topic-item">DbContext & DbSet</div>
+                        <div class="topic-item">Migrations & Seeding</div>
+                        <div class="topic-item">LINQ to Entities</div>
+                        <div class="topic-item">Relationships & Navigation</div>
+                        <div class="topic-item">Performance Optimization</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">05</div>
+                        <div class="module-title">
+                            <h3>Frontend with Blazor</h3>
+                            <p class="module-duration">Week 10-12</p>
                         </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Blazor Server & WebAssembly</div>
+                        <div class="topic-item">Component Development</div>
+                        <div class="topic-item">Data Binding & Events</div>
+                        <div class="topic-item">Forms & Validation</div>
+                        <div class="topic-item">JavaScript Interop</div>
+                        <div class="topic-item">State Management</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">06</div>
+                        <div class="module-title">
+                            <h3>Testing & Quality</h3>
+                            <p class="module-duration">Week 13</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Unit Testing (xUnit, NUnit)</div>
+                        <div class="topic-item">Integration Testing</div>
+                        <div class="topic-item">Mocking with Moq</div>
+                        <div class="topic-item">Test-Driven Development</div>
+                        <div class="topic-item">Code Coverage</div>
+                        <div class="topic-item">Continuous Testing</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">07</div>
+                        <div class="module-title">
+                            <h3>Azure Cloud Integration</h3>
+                            <p class="module-duration">Week 14-15</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Azure App Services</div>
+                        <div class="topic-item">Azure SQL Database</div>
+                        <div class="topic-item">Azure Functions</div>
+                        <div class="topic-item">Azure Storage</div>
+                        <div class="topic-item">Application Insights</div>
+                        <div class="topic-item">Azure DevOps CI/CD</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">08</div>
+                        <div class="module-title">
+                            <h3>Capstone Project</h3>
+                            <p class="module-duration">Week 16-18</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Full-Stack .NET Application</div>
+                        <div class="topic-item">Blazor Frontend</div>
+                        <div class="topic-item">Web API Backend</div>
+                        <div class="topic-item">Entity Framework Integration</div>
+                        <div class="topic-item">Azure Deployment</div>
+                        <div class="topic-item">Portfolio Presentation</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- QA & QE Curriculum Detail -->
+    <section class="curriculum-detail" id="curriculum-qa">
+        <div class="section-container">
+            <a href="#programs" class="back-btn" onclick="showSection('programs')">← Back to Programs</a>
+            <div class="curriculum-header">
+                <div class="program-icon" style="font-size: 4rem; margin-bottom: 1rem;">✅</div>
+                <h2>Quality Assurance & Quality Engineering Curriculum</h2>
+                <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9);">
+                    Master software testing methodologies and quality engineering practices
+                </p>
+            </div>
+            
+            <div class="curriculum-modules">
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">01</div>
+                        <div class="module-title">
+                            <h3>Software Testing Fundamentals</h3>
+                            <p class="module-duration">Week 1-2</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Testing Principles & Concepts</div>
+                        <div class="topic-item">SDLC & STLC</div>
+                        <div class="topic-item">Test Planning & Strategy</div>
+                        <div class="topic-item">Test Design Techniques</div>
+                        <div class="topic-item">Defect Management</div>
+                        <div class="topic-item">Testing Documentation</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">02</div>
+                        <div class="module-title">
+                            <h3>Manual Testing</h3>
+                            <p class="module-duration">Week 3-4</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Functional Testing</div>
+                        <div class="topic-item">UI/UX Testing</div>
+                        <div class="topic-item">Exploratory Testing</div>
+                        <div class="topic-item">Regression Testing</div>
+                        <div class="topic-item">Test Case Creation</div>
+                        <div class="topic-item">Bug Reporting & Tracking</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">03</div>
+                        <div class="module-title">
+                            <h3>Test Automation Fundamentals</h3>
+                            <p class="module-duration">Week 5-6</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Automation Strategy</div>
+                        <div class="topic-item">Programming for Testers (Python/Java)</div>
+                        <div class="topic-item">Test Framework Design</div>
+                        <div class="topic-item">Page Object Model</div>
+                        <div class="topic-item">Data-Driven Testing</div>
+                        <div class="topic-item">Keyword-Driven Testing</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">04</div>
+                        <div class="module-title">
+                            <h3>Selenium WebDriver</h3>
+                            <p class="module-duration">Week 7-9</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Selenium Architecture</div>
+                        <div class="topic-item">Web Element Interaction</div>
+                        <div class="topic-item">Waits & Synchronization</div>
+                        <div class="topic-item">Handling Alerts & Frames</div>
+                        <div class="topic-item">Cross-Browser Testing</div>
+                        <div class="topic-item">TestNG & JUnit Integration</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">05</div>
+                        <div class="module-title">
+                            <h3>Modern Test Frameworks</h3>
+                            <p class="module-duration">Week 10-11</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Cypress for Web Testing</div>
+                        <div class="topic-item">Playwright Automation</div>
+                        <div class="topic-item">Mobile Testing (Appium)</div>
+                        <div class="topic-item">Component Testing</div>
+                        <div class="topic-item">Visual Regression Testing</div>
+                        <div class="topic-item">Accessibility Testing</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">06</div>
+                        <div class="module-title">
+                            <h3>API Testing</h3>
+                            <p class="module-duration">Week 12-13</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">REST API Testing</div>
+                        <div class="topic-item">Postman & Newman</div>
+                        <div class="topic-item">RestAssured Framework</div>
+                        <div class="topic-item">API Automation</div>
+                        <div class="topic-item">GraphQL Testing</div>
+                        <div class="topic-item">API Security Testing</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">07</div>
+                        <div class="module-title">
+                            <h3>Performance & Load Testing</h3>
+                            <p class="module-duration">Week 14</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Performance Testing Concepts</div>
+                        <div class="topic-item">JMeter & K6</div>
+                        <div class="topic-item">Load & Stress Testing</div>
+                        <div class="topic-item">Performance Metrics</div>
+                        <div class="topic-item">Bottleneck Analysis</div>
+                        <div class="topic-item">Performance Reporting</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">08</div>
+                        <div class="module-title">
+                            <h3>CI/CD & DevOps for QA</h3>
+                            <p class="module-duration">Week 15</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Jenkins for Test Automation</div>
+                        <div class="topic-item">GitHub Actions</div>
+                        <div class="topic-item">Docker for Testing</div>
+                        <div class="topic-item">Continuous Testing</div>
+                        <div class="topic-item">Test Reporting & Analytics</div>
+                        <div class="topic-item">Quality Metrics & KPIs</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">09</div>
+                        <div class="module-title">
+                            <h3>Capstone Testing Project</h3>
+                            <p class="module-duration">Week 16-18</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">End-to-End Test Framework</div>
+                        <div class="topic-item">Manual & Automated Testing</div>
+                        <div class="topic-item">API & UI Test Suite</div>
+                        <div class="topic-item">CI/CD Pipeline Integration</div>
+                        <div class="topic-item">Test Reports & Documentation</div>
+                        <div class="topic-item">Portfolio Development</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include original curriculum sections for LLM, Agentic, Full-Stack, and DevOps here -->
+    <!-- (Keeping them from original code for brevity) -->
+
     <!-- Companies Grid -->
     <section class="companies" id="companies">
         <div class="section-container">
             <div class="section-header">
-                <div class="section-tag">100+ Hiring Partners</div>
+                <div class="section-tag">Hiring Partners</div>
                 <h2>Companies That Hired Our Graduates</h2>
                 <p>
                     Leading organizations across Africa and globally trust Future Labs Africa 
@@ -1903,7 +2626,10 @@
             </div>
             <div class="team-grid">
                 <div class="team-card">
-                    <div class="team-photo">JM</div>
+                    <div class="team-photo">
+                        <img src="director.JPG" alt="Captain John Mukoma" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="team-photo-placeholder" style="display: none;">JM</div>
+                    </div>
                     <div class="team-info">
                         <h3>Captain John Mukoma</h3>
                         <div class="team-role">Director</div>
@@ -1914,7 +2640,10 @@
                     </div>
                 </div>
                 <div class="team-card">
-                    <div class="team-photo">JN</div>
+                    <div class="team-photo">
+                        <img src="ceo.jpeg" alt="Jonathan Ndambuki" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="team-photo-placeholder" style="display: none;">JN</div>
+                    </div>
                     <div class="team-info">
                         <h3>Jonathan Ndambuki</h3>
                         <div class="team-role">Chief Executive Officer</div>
@@ -1925,7 +2654,10 @@
                     </div>
                 </div>
                 <div class="team-card">
-                    <div class="team-photo">AM</div>
+                    <div class="team-photo">
+                        <img src="md.JPG" alt="Allan Maina Mwangi" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="team-photo-placeholder" style="display: none;">AM</div>
+                    </div>
                     <div class="team-info">
                         <h3>Allan Maina Mwangi</h3>
                         <div class="team-role">Managing Director</div>
@@ -1936,7 +2668,10 @@
                     </div>
                 </div>
                 <div class="team-card">
-                    <div class="team-photo">DK</div>
+                    <div class="team-photo">
+                        <img src="tm.JPG" alt="Daniel Kitheka" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="team-photo-placeholder" style="display: none;">DK</div>
+                    </div>
                     <div class="team-info">
                         <h3>Daniel Kitheka</h3>
                         <div class="team-role">Head of Training</div>
@@ -1947,7 +2682,10 @@
                     </div>
                 </div>
                 <div class="team-card">
-                    <div class="team-photo">JW</div>
+                    <div class="team-photo">
+                        <img src="sm.png" alt="John Weru Kairu" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="team-photo-placeholder" style="display: none;">JW</div>
+                    </div>
                     <div class="team-info">
                         <h3>John Weru Kairu</h3>
                         <div class="team-role">Graphic Designer / Media</div>
@@ -2004,7 +2742,9 @@
                                 <option value="enroll-llm">Enrolling in LLM Engineering</option>
                                 <option value="enroll-agentic">Enrolling in Agentic AI</option>
                                 <option value="enroll-fullstack">Enrolling in Full-Stack Development</option>
+                                <option value="enroll-fullstack-csharp">Enrolling in Full-Stack C#</option>
                                 <option value="enroll-devops">Enrolling in DevOps & Cloud</option>
+                                <option value="enroll-qa">Enrolling in QA & QE</option>
                                 <option value="other">Other Inquiry</option>
                             </select>
                         </div>
@@ -2040,7 +2780,7 @@
                 <ul>
                     <li><a href="#home" onclick="showSection('home')">Home</a></li>
                     <li><a href="#programs" onclick="showSection('programs')">Programs</a></li>
-                    <li><a href="#partnerships" onclick="showSection('partnerships')">Partnerships</a></li>
+                    <li><a href="#collaboration" onclick="showSection('collaboration')">Collaborations</a></li>
                     <li><a href="#companies">Our Partners</a></li>
                     <li><a href="#team">Team</a></li>
                 </ul>
@@ -2051,14 +2791,15 @@
                     <li><a href="#" onclick="showCurriculum('llm')">LLM Engineering</a></li>
                     <li><a href="#" onclick="showCurriculum('agentic')">Agentic AI</a></li>
                     <li><a href="#" onclick="showCurriculum('fullstack')">Full-Stack Development</a></li>
+                    <li><a href="#" onclick="showCurriculum('fullstack-csharp')">Full-Stack C#</a></li>
                     <li><a href="#" onclick="showCurriculum('devops')">DevOps & Cloud</a></li>
-                    <li><a href="#enrollment">Hire Graduates</a></li>
+                    <li><a href="#" onclick="showCurriculum('qa')">QA & QE</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Contact Us</h3>
                 <ul>
-                    <li>📧 futurelabsafrica@gmail.com</li>
+                    <li>📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="573122232225323b3635243631253e343617303a363e3b7934383a">[email&#160;protected]</a></li>
                     <li>📱 +254 713 182853</li>
                     <li>📍 Nairobi, Kenya</li>
                     <li>@futurelabsafrica</li>
@@ -2070,11 +2811,22 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Navigation
         function toggleMobileMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
+            const navLinks = document.getElementById('navLinks');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            navLinks.classList.toggle('active');
+            toggle.classList.toggle('active');
         }
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+                document.querySelector('.mobile-menu-toggle').classList.remove('active');
+            });
+        });
 
         window.addEventListener('scroll', function() {
             const navbar = document.getElementById('navbar');
@@ -2089,22 +2841,25 @@
             });
             
             // Show relevant sections
+            const programsSection = document.querySelector('.programs-overview');
+            const collaborationSection = document.querySelector('.collaboration');
+            
             if (sectionId === 'programs') {
-                document.querySelector('.programs-overview').style.display = 'block';
-                document.querySelector('.partnerships').style.display = 'none';
-            } else if (sectionId === 'partnerships') {
-                document.querySelector('.programs-overview').style.display = 'none';
-                document.querySelector('.partnerships').style.display = 'block';
+                programsSection.style.display = 'block';
+                collaborationSection.style.display = 'none';
+            } else if (sectionId === 'collaboration') {
+                programsSection.style.display = 'none';
+                collaborationSection.style.display = 'block';
             } else if (sectionId === 'home') {
-                document.querySelector('.programs-overview').style.display = 'block';
-                document.querySelector('.partnerships').style.display = 'block';
+                programsSection.style.display = 'block';
+                collaborationSection.style.display = 'block';
             }
         }
 
         function showCurriculum(programId) {
-            // Hide programs overview and partnerships
+            // Hide programs overview and collaboration
             document.querySelector('.programs-overview').style.display = 'none';
-            document.querySelector('.partnerships').style.display = 'none';
+            document.querySelector('.collaboration').style.display = 'none';
             
             // Hide all curriculum details
             document.querySelectorAll('.curriculum-detail').forEach(section => {
@@ -2117,9 +2872,6 @@
                 curriculumSection.classList.add('active');
                 curriculumSection.scrollIntoView({ behavior: 'smooth' });
             }
-            
-            // Close mobile menu
-            document.getElementById('navLinks').classList.remove('active');
         }
 
         // Smooth scroll
@@ -2136,7 +2888,6 @@
                             top: targetPosition,
                             behavior: 'smooth'
                         });
-                        document.getElementById('navLinks').classList.remove('active');
                     }
                 }
             });
@@ -2187,20 +2938,3 @@
             }, 16);
         }
 
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.querySelectorAll('.stat-number').forEach(stat => {
-                        const target = parseInt(stat.textContent.replace(/[^0-9]/g, ''));
-                        animateCounter(stat, target);
-                    });
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        const heroStats = document.querySelector('.hero-stats');
-        if (heroStats) statsObserver.observe(heroStats);
-    </script>
-</body>
-</html>
