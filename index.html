@@ -1,0 +1,2939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Future Labs Africa - Partner with us to hire Africa's top tech talent. We train skilled professionals in LLM Engineering, Agentic AI, Full-Stack Development, DevOps, and Cloud Computing.">
+    <meta name="keywords" content="African tech talent, AI engineers Kenya, LLM training Africa, fullstack developers, DevOps engineers, tech recruitment Africa, AI education Kenya">
+    <meta name="author" content="Future Labs Africa">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Future Labs Africa - Equip Talent, Shape Tomorrow">
+    <meta property="og:description" content="Partner with us to access Africa's top AI and tech talent. 5000+ graduates trained in cutting-edge technologies.">
+    <meta property="og:type" content="website">
+    
+    <title>Future Labs Africa | Equip Talent, Shape Tomorrow - Partner With Us</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-navy: #0A2342;
+            --primary-green: #00D66C;
+            --accent-teal: #1B6B93;
+            --text-dark: #1a1a1a;
+            --text-light: #4a5568;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --border-color: #e2e8f0;
+            --success-green: #047857;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Crimson Pro', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 35, 66, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary-green);
+            transition: all 0.3s ease;
+        }
+        
+        nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0.75rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-img {
+            height: 60px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--bg-white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-green);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: var(--primary-green);
+            color: var(--primary-navy);
+            padding: 0.75rem 1.75rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-green);
+        }
+        
+        .cta-button:hover {
+            background: transparent;
+            color: var(--primary-green);
+            transform: translateY(-2px);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+        
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--bg-white);
+            transition: all 0.3s ease;
+            display: block;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 92px;
+            background: linear-gradient(135deg, rgba(10, 35, 66, 0.95) 0%, rgba(27, 107, 147, 0.95) 100%), 
+                        url('hero-background.jpg') center/cover no-repeat;
+            color: var(--bg-white);
+            padding: 6rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23ffffff" opacity="0.05"/></svg>') repeat;
+            animation: movePattern 20s linear infinite;
+        }
+        
+        @keyframes movePattern {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(60px, 60px); }
+        }
+        
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero-text .highlight {
+            color: var(--primary-green);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero-tagline {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.8;
+            font-weight: 500;
+        }
+        
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .mv-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .mv-card:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: var(--primary-green);
+            transform: translateY(-5px);
+        }
+        
+        .mv-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary-green);
+            margin-bottom: 0.75rem;
+            font-family: 'Work Sans', sans-serif;
+        }
+        
+        .mv-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            font-family: 'Crimson Pro', serif;
+        }
+        
+        .stat-label {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.8);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 2px solid;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: var(--primary-green);
+            color: var(--primary-navy);
+            border-color: var(--primary-green);
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--primary-green);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 214, 108, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--bg-white);
+            border-color: var(--bg-white);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--bg-white);
+            color: var(--primary-navy);
+            transform: translateY(-3px);
+        }
+        
+        /* Section Styles */
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-tag {
+            color: var(--primary-green);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.75rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Programs Overview */
+        .programs-overview {
+            padding: 6rem 2rem;
+            background: var(--bg-white);
+        }
+        
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .program-card {
+            background: var(--bg-light);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .program-card:hover {
+            border-color: var(--primary-green);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+        }
+        
+        .program-header {
+            background: var(--primary-navy);
+            color: var(--bg-white);
+            padding: 2.5rem;
+            position: relative;
+        }
+        
+        .program-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .program-header h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .program-header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+        
+        .program-preview {
+            padding: 2rem;
+        }
+        
+        .preview-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .preview-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .preview-list li:before {
+            content: '✓';
+            color: var(--primary-green);
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .view-curriculum-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary-navy);
+            color: var(--bg-white);
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .view-curriculum-btn:hover {
+            background: var(--primary-green);
+            color: var(--primary-navy);
+        }
+        
+        /* Curriculum Detail Pages */
+        .curriculum-detail {
+            padding: 6rem 2rem;
+            background: var(--bg-light);
+            display: none;
+        }
+        
+        .curriculum-detail.active {
+            display: block;
+        }
+        
+        .curriculum-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--accent-teal) 100%);
+            color: var(--bg-white);
+            border-radius: 12px;
+        }
+        
+        .curriculum-header h2 {
+            font-size: 3rem;
+            color: var(--bg-white);
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            gap: 1rem;
+        }
+        
+        .curriculum-modules {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .module-card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .module-card:hover {
+            border-color: var(--primary-green);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .module-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .module-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-navy);
+            color: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .module-title h3 {
+            font-size: 1.75rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.25rem;
+        }
+        
+        .module-duration {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .module-topics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+        
+        .topic-item {
+            padding: 0.75rem 1rem;
+            background: var(--bg-light);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .topic-item:before {
+            content: '→';
+            color: var(--primary-green);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        /* Collaboration Section */
+        .collaboration {
+            padding: 6rem 2rem;
+            background: var(--bg-light);
+        }
+        
+        .collaboration-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .collaboration-card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .collaboration-card:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+        
+        .collaboration-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .collaboration-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+        
+        .collaboration-type {
+            color: var(--primary-green);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Partnership Photos */
+        .partnership-photos {
+            margin-top: 4rem;
+        }
+        
+        .photos-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .photo-card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .photo-card:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+        
+        .photo-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .photo-caption {
+            padding: 1.5rem;
+        }
+        
+        .photo-caption h4 {
+            font-size: 1.1rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+        
+        .photo-caption p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+        
+        /* Companies Grid */
+        .companies {
+            padding: 6rem 2rem;
+            background: var(--bg-light);
+        }
+        
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .company-logo {
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+            min-height: 90px;
+        }
+        
+        .company-logo:hover {
+            border-color: var(--primary-green);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .company-logo span {
+            font-weight: 600;
+            color: var(--primary-navy);
+            font-size: 0.85rem;
+            text-align: center;
+        }
+        
+        /* Team Section */
+        .team {
+            padding: 6rem 2rem;
+            background: var(--bg-white);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .team-card {
+            background: var(--bg-light);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .team-card:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+        
+        .team-photo {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--accent-teal) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--primary-green);
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .team-photo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--primary-green);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--accent-teal) 100%);
+        }
+        
+        .team-info {
+            padding: 2rem;
+            background: var(--bg-white);
+        }
+        
+        .team-info h3 {
+            font-size: 1.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-role {
+            color: var(--primary-green);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        
+        .team-info p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* Enrollment Form */
+        .enrollment {
+            padding: 6rem 2rem;
+            background: var(--bg-light);
+        }
+        
+        .form-container {
+            max-width: 900px;
+            margin: 3rem auto 0;
+            background: var(--bg-white);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: 'Work Sans', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            background: var(--primary-navy);
+            color: var(--bg-white);
+            padding: 1.25rem 3rem;
+            border: 2px solid var(--primary-navy);
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background: var(--primary-green);
+            border-color: var(--primary-green);
+            color: var(--primary-navy);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 214, 108, 0.3);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-navy);
+            color: var(--bg-white);
+            padding: 4rem 2rem 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-green);
+        }
+        
+        .footer-section p {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-section ul li a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section ul li a:hover {
+            color: var(--primary-green);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-green);
+            color: var(--primary-navy);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        .stagger-6 { animation-delay: 0.6s; }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-content,
+            .partnership-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .companies-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .collaboration-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            /* Mobile Navigation */
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 92px;
+                left: -100%;
+                flex-direction: column;
+                background: var(--primary-navy);
+                width: 100%;
+                padding: 2rem;
+                gap: 1.5rem;
+                transition: left 0.3s ease;
+                max-height: calc(100vh - 92px);
+                overflow-y: auto;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                width: 100%;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+            }
+            
+            .cta-button {
+                display: block;
+                text-align: center;
+            }
+            
+            /* Hero Section */
+            .hero {
+                padding: 3rem 1.5rem 2rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1rem;
+            }
+            
+            .mission-vision {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .mv-card {
+                padding: 1.25rem;
+            }
+            
+            .mv-card h3 {
+                font-size: 1.1rem;
+            }
+            
+            .mv-card p {
+                font-size: 0.9rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                padding: 1rem;
+            }
+            
+            /* Section Headers */
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .section-header p {
+                font-size: 1rem;
+            }
+            
+            /* Programs */
+            .programs-overview,
+            .collaboration,
+            .partnerships,
+            .companies,
+            .team,
+            .enrollment {
+                padding: 4rem 1.5rem;
+            }
+            
+            .program-header {
+                padding: 1.5rem;
+            }
+            
+            .program-header h3 {
+                font-size: 1.5rem;
+            }
+            
+            .program-preview {
+                padding: 1.5rem;
+            }
+            
+            /* Curriculum Detail */
+            .curriculum-detail {
+                padding: 4rem 1.5rem;
+            }
+            
+            .curriculum-header {
+                padding: 2rem 1.5rem;
+            }
+            
+            .curriculum-header h2 {
+                font-size: 2rem;
+            }
+            
+            .module-card {
+                padding: 1.5rem;
+            }
+            
+            .module-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            .module-title h3 {
+                font-size: 1.5rem;
+            }
+            
+            .module-topics {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Collaboration */
+            .collaboration-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .photos-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            /* Partnerships */
+            .partnership-content {
+                gap: 2rem;
+            }
+            
+            .partner-logos {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Companies */
+            .companies-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            /* Team */
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-photo {
+                height: 250px;
+            }
+            
+            /* Form */
+            .form-container {
+                padding: 2rem 1.5rem;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Footer */
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo-img {
+                height: 50px;
+            }
+            
+            .nav-container {
+                padding: 0.75rem 1rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 1.75rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+            
+            .stat-number {
+                font-size: 1.75rem;
+            }
+            
+            .program-icon {
+                font-size: 2.5rem;
+            }
+            
+            .module-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+            
+            .collaboration-icon {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <img src="logo.png" alt="Future Labs Africa" class="logo-img">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#programs" onclick="showSection('programs')">Programs</a></li>
+                <li><a href="#collaboration" onclick="showSection('collaboration')">Collaborations</a></li>
+                <li><a href="#companies">Our Partners</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#enrollment" class="cta-button">Hire Talent / Enroll</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text fade-in">
+                <h1>
+                    Building Tomorrow's<br>
+                    <span class="highlight">AI & Tech Talent</span><br>
+                    for a Digital Africa
+                </h1>
+                <p class="hero-tagline">
+                    We turn passion into profession by training future innovators in customer care and 
+                    software development. Learn the skills, build your future, change the game.
+                </p>
+                
+                <div class="mission-vision">
+                    <div class="mv-card">
+                        <h3>🎯 Our Mission</h3>
+                        <p>To train and launch the next generation of skilled, future-ready African professionals through hands-on learning, industry-driven programs, and real-world experience.</p>
+                    </div>
+                    <div class="mv-card">
+                        <h3>🚀 Our Vision</h3>
+                        <p>To become Africa's leading technology education and innovation hub, driving global competitiveness, digital inclusion, and sustainable growth through empowered tech talent.</p>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#enrollment" class="btn-primary">Hire Our Graduates</a>
+                    <a href="#programs" onclick="showSection('programs')" class="btn-secondary">View Programs</a>
+                </div>
+            </div>
+            <div class="hero-stats fade-in stagger-2">
+                <div class="stat-item">
+                    <div class="stat-number">5,000+</div>
+                    <div class="stat-label">Graduates Trained</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Partner Companies</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3,500+</div>
+                    <div class="stat-label">Successfully Placed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Overview Section -->
+    <section class="programs-overview" id="programs">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">Our Programs</div>
+                <h2>Cutting-Edge Curriculum for Modern Tech</h2>
+                <p>
+                    Industry-aligned programs designed to produce job-ready professionals 
+                    in the most in-demand fields of technology.
+                </p>
+            </div>
+            <div class="programs-grid">
+                <!-- LLM Engineering Program -->
+                <div class="program-card fade-in stagger-1">
+                    <div class="program-header">
+                        <div class="program-icon">🤖</div>
+                        <h3>LLM Engineering</h3>
+                        <p>Master the art of building, fine-tuning, and deploying Large Language Models</p>
+                    </div>
+                    <div class="program-preview">
+                        <ul class="preview-list">
+                            <li>Data Analytics & Visualization</li>
+                            <li>Frontier & Open Source Models</li>
+                            <li>QLoRA Fine-Tuning</li>
+                            <li>RAG Systems & Deployment</li>
+                            <li>Neural Networks Deep Dive</li>
+                        </ul>
+                        <button class="view-curriculum-btn" onclick="showCurriculum('llm')">View Full Curriculum</button>
+                    </div>
+                </div>
+
+                <!-- Agentic AI Program -->
+                <div class="program-card fade-in stagger-2">
+                    <div class="program-header">
+                        <div class="program-icon">🎯</div>
+                        <h3>Agentic AI</h3>
+                        <p>Build intelligent agents that can reason, plan, and execute complex tasks</p>
+                    </div>
+                    <div class="program-preview">
+                        <ul class="preview-list">
+                            <li>Agent Architectures & Design</li>
+                            <li>Tool Integration & Function Calling</li>
+                            <li>Multi-Agent Systems</li>
+                            <li>Memory & State Management</li>
+                            <li>Production AI Agents</li>
+                        </ul>
+                        <button class="view-curriculum-btn" onclick="showCurriculum('agentic')">View Full Curriculum</button>
+                    </div>
+                </div>
+
+                <!-- Full-Stack Development -->
+                <div class="program-card fade-in stagger-3">
+                    <div class="program-header">
+                        <div class="program-icon">💻</div>
+                        <h3>Full-Stack Development</h3>
+                        <p>Build modern web applications from front-end to back-end</p>
+                    </div>
+                    <div class="program-preview">
+                        <ul class="preview-list">
+                            <li>React, Angular & Modern Frameworks</li>
+                            <li>Node.js, C#, PHP Backend</li>
+                            <li>Database Design & Management</li>
+                            <li>API Development & Integration</li>
+                            <li>Real-World Project Development</li>
+                        </ul>
+                        <button class="view-curriculum-btn" onclick="showCurriculum('fullstack')">View Full Curriculum</button>
+                    </div>
+                </div>
+
+                <!-- Full-Stack C# Program -->
+                <div class="program-card fade-in stagger-4">
+                    <div class="program-header">
+                        <div class="program-icon">🔷</div>
+                        <h3>Full-Stack C# Development</h3>
+                        <p>Specialize in enterprise-grade .NET applications and C# development</p>
+                    </div>
+                    <div class="program-preview">
+                        <ul class="preview-list">
+                            <li>C# & .NET Core Mastery</li>
+                            <li>ASP.NET MVC & Web API</li>
+                            <li>Entity Framework & LINQ</li>
+                            <li>Blazor & Modern UI</li>
+                            <li>Azure Cloud Integration</li>
+                        </ul>
+                        <button class="view-curriculum-btn" onclick="showCurriculum('fullstack-csharp')">View Full Curriculum</button>
+                    </div>
+                </div>
+
+                <!-- DevOps & Cloud -->
+                <div class="program-card fade-in stagger-5">
+                    <div class="program-header">
+                        <div class="program-icon">☁️</div>
+                        <h3>DevOps & Cloud Engineering</h3>
+                        <p>Master cloud infrastructure, automation, and deployment pipelines</p>
+                    </div>
+                    <div class="program-preview">
+                        <ul class="preview-list">
+                            <li>AWS & Azure Cloud Platforms</li>
+                            <li>Docker & Kubernetes</li>
+                            <li>CI/CD Pipeline Automation</li>
+                            <li>Infrastructure as Code</li>
+                            <li>Monitoring & Security</li>
+                        </ul>
+                        <button class="view-curriculum-btn" onclick="showCurriculum('devops')">View Full Curriculum</button>
+                    </div>
+                </div>
+
+                <!-- QA & QE Program -->
+                <div class="program-card fade-in stagger-6">
+                    <div class="program-header">
+                        <div class="program-icon">✅</div>
+                        <h3>Quality Assurance & Quality Engineering</h3>
+                        <p>Ensure software quality through comprehensive testing methodologies</p>
+                    </div>
+                    <div class="program-preview">
+                        <ul class="preview-list">
+                            <li>Manual & Automated Testing</li>
+                            <li>Selenium, Cypress & Test Frameworks</li>
+                            <li>API & Performance Testing</li>
+                            <li>CI/CD Integration</li>
+                            <li>Test Strategy & Quality Metrics</li>
+                        </ul>
+                        <button class="view-curriculum-btn" onclick="showCurriculum('qa')">View Full Curriculum</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Section -->
+    <section class="collaboration" id="collaboration">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">Collaborations & Partnerships</div>
+                <h2>University & Institution Partnerships</h2>
+                <p>
+                    We collaborate with leading educational institutions across Kenya to expand access to 
+                    quality tech education and create pathways for student success.
+                </p>
+            </div>
+            <div class="collaboration-grid">
+                <div class="collaboration-card fade-in stagger-1">
+                    <div class="collaboration-icon">🏛️</div>
+                    <h3>PC Kinyanjui Technical Training Institute</h3>
+                    <div class="collaboration-type">Technical Training Partner</div>
+                </div>
+                
+                <div class="collaboration-card fade-in stagger-2">
+                    <div class="collaboration-icon">🎓</div>
+                    <h3>Premier College of Social Work and Community Development</h3>
+                    <div class="collaboration-type">Training & Community Development Partner</div>
+                </div>
+                
+                <div class="collaboration-card fade-in stagger-3">
+                    <div class="collaboration-icon">🏛️</div>
+                    <h3>Dedan Kimathi University of Technology</h3>
+                    <div class="collaboration-type">Training Partner </div>
+                </div>
+                
+                <div class="collaboration-card fade-in stagger-4">
+                    <div class="collaboration-icon">🎓</div>
+                    <h3>Murang'a University of Technology</h3>
+                    <div class="collaboration-type">Training Partner</div>
+                </div>
+                
+                <div class="collaboration-card fade-in stagger-5">
+                    <div class="collaboration-icon">🏛️</div>
+                    <h3>Kirinyaga University</h3>
+                    <div class="collaboration-type">Training Partner</div>
+                </div>
+                
+                <div class="collaboration-card fade-in stagger-6">
+                    <div class="collaboration-icon">🎓</div>
+                    <h3>Embu University</h3>
+                    <div class="collaboration-type">Training Partner</div>
+                </div>
+                
+                <div class="collaboration-card fade-in">
+                    <div class="collaboration-icon">🏛️</div>
+                    <h3>Laikipia University</h3>
+                    <div class="collaboration-type">Training Partner</div>
+                </div>
+                
+                <div class="collaboration-card fade-in">
+                    <div class="collaboration-icon">🎓</div>
+                    <h3>Chuka University</h3>
+                    <div class="collaboration-type">Training Partner</div>
+                </div>
+       
+            </div>
+            
+            <!-- Partnership Photos Section -->
+            <div class="partnership-photos">
+                <div class="section-header" style="margin-top: 4rem;">
+                    <div class="section-tag">Our Journey Together</div>
+                    <h2>Partnership Moments</h2>
+                    <p>Celebrating our collaborations through MOU signings, training sessions, and community impact</p>
+                </div>
+                
+                <div class="photos-grid">
+                    <div class="photo-card">
+                        <img src="partnership-photo-1.jpg" alt="MOU Signing Ceremony">
+                        <div class="photo-caption">
+                            <h4>MOU Signing Ceremonies</h4>
+                            <p>Formalizing partnerships with leading institutions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-card">
+                        <img src="partnership-photo-2.jpeg" alt="Training Session">
+                        <div class="photo-caption">
+                            <h4>Hands-On Training</h4>
+                            <p>Students engaged in practical tech learning</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-card">
+                        <img src="partnership-photo-3.jpg" alt="Graduation Ceremony">
+                        <div class="photo-caption">
+                            <h4>Graduation & Success</h4>
+                            <p>Celebrating our graduates' achievements</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-card">
+                        <img src="partnership-photo-4.jpg" alt="Community Outreach">
+                        <div class="photo-caption">
+                            <h4>Community Impact</h4>
+                            <p>Extending tech education to different communities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Detail Sections (LLM, Agentic, Full-Stack, DevOps remain the same as original) -->
+    <!-- I'll include the new curriculum sections for Full-Stack C# and QA/QE -->
+
+    <!-- LLM Engineering Curriculum Detail -->
+    <section class="curriculum-detail" id="curriculum-llm">
+        <div class="section-container">
+            <a href="#programs" class="back-btn" onclick="showSection('programs')">← Back to Programs</a>
+            <div class="curriculum-header">
+                <div class="program-icon" style="font-size: 4rem; margin-bottom: 1rem;">🤖</div>
+                <h2>LLM Engineering Curriculum</h2>
+                <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9);">
+                    Comprehensive training in Large Language Models, from fundamentals to production deployment
+                </p>
+            </div>
+            
+            <div class="curriculum-modules">
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">01</div>
+                        <div class="module-title">
+                            <h3>Data Analytics & Visualization</h3>
+                            <p class="module-duration">Week 1-2</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Python for Data Analysis</div>
+                        <div class="topic-item">Pandas & NumPy</div>
+                        <div class="topic-item">Data Cleaning & Preprocessing</div>
+                        <div class="topic-item">Statistical Analysis</div>
+                        <div class="topic-item">Matplotlib & Seaborn</div>
+                        <div class="topic-item">Interactive Dashboards</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">02</div>
+                        <div class="module-title">
+                            <h3>Frontier & Open Source Models</h3>
+                            <p class="module-duration">Week 3-4</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">GPT-4, Claude, Gemini</div>
+                        <div class="topic-item">LLaMA, Mistral, Phi</div>
+                        <div class="topic-item">Model Comparison & Selection</div>
+                        <div class="topic-item">API Integration</div>
+                        <div class="topic-item">Prompt Engineering</div>
+                        <div class="topic-item">Cost Optimization</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">03</div>
+                        <div class="module-title">
+                            <h3>QLoRA & Model Fine-Tuning</h3>
+                            <p class="module-duration">Week 5-6</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">LoRA & QLoRA Techniques</div>
+                        <div class="topic-item">Dataset Preparation</div>
+                        <div class="topic-item">Fine-Tuning Workflows</div>
+                        <div class="topic-item">Parameter-Efficient Training</div>
+                        <div class="topic-item">Model Evaluation Metrics</div>
+                        <div class="topic-item">Hyperparameter Tuning</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">04</div>
+                        <div class="module-title">
+                            <h3>RAG Systems & Vector Databases</h3>
+                            <p class="module-duration">Week 7-8</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Retrieval-Augmented Generation</div>
+                        <div class="topic-item">Embeddings & Semantic Search</div>
+                        <div class="topic-item">Pinecone, Weaviate, ChromaDB</div>
+                        <div class="topic-item">Document Processing Pipelines</div>
+                        <div class="topic-item">Chunking Strategies</div>
+                        <div class="topic-item">Query Optimization</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">05</div>
+                        <div class="module-title">
+                            <h3>Neural Networks & Deep Learning</h3>
+                            <p class="module-duration">Week 9-10</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Neural Network Fundamentals</div>
+                        <div class="topic-item">Transformer Architecture</div>
+                        <div class="topic-item">Attention Mechanisms</div>
+                        <div class="topic-item">PyTorch & TensorFlow</div>
+                        <div class="topic-item">Training Loop Implementation</div>
+                        <div class="topic-item">GPU Acceleration</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">06</div>
+                        <div class="module-title">
+                            <h3>Tokenization & Text Processing</h3>
+                            <p class="module-duration">Week 11</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">BPE, WordPiece, SentencePiece</div>
+                        <div class="topic-item">Custom Tokenizers</div>
+                        <div class="topic-item">Token Optimization</div>
+                        <div class="topic-item">Multilingual Handling</div>
+                        <div class="topic-item">Special Tokens Management</div>
+                        <div class="topic-item">Vocabulary Design</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">07</div>
+                        <div class="module-title">
+                            <h3>Optimizers & Loss Functions</h3>
+                            <p class="module-duration">Week 12</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Adam, AdamW, SGD</div>
+                        <div class="topic-item">Learning Rate Scheduling</div>
+                        <div class="topic-item">Cross-Entropy Loss</div>
+                        <div class="topic-item">Custom Loss Functions</div>
+                        <div class="topic-item">Gradient Clipping</div>
+                        <div class="topic-item">Convergence Monitoring</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">08</div>
+                        <div class="module-title">
+                            <h3>Model Deployment & Production</h3>
+                            <p class="module-duration">Week 13-14</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Model Serving (FastAPI, Flask)</div>
+                        <div class="topic-item">Containerization with Docker</div>
+                        <div class="topic-item">Cloud Deployment (AWS, Azure)</div>
+                        <div class="topic-item">Model Optimization & Quantization</div>
+                        <div class="topic-item">API Rate Limiting & Security</div>
+                        <div class="topic-item">Monitoring & Logging</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">09</div>
+                        <div class="module-title">
+                            <h3>Evaluation & Validation</h3>
+                            <p class="module-duration">Week 15</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">BLEU, ROUGE, BERTScore</div>
+                        <div class="topic-item">Human Evaluation Frameworks</div>
+                        <div class="topic-item">A/B Testing Strategies</div>
+                        <div class="topic-item">Bias Detection & Mitigation</div>
+                        <div class="topic-item">Performance Benchmarking</div>
+                        <div class="topic-item">Quality Assurance Pipelines</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">10</div>
+                        <div class="module-title">
+                            <h3>Capstone Project</h3>
+                            <p class="module-duration">Week 16</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">End-to-End LLM Application</div>
+                        <div class="topic-item">RAG System Implementation</div>
+                        <div class="topic-item">Model Fine-Tuning</div>
+                        <div class="topic-item">Production Deployment</div>
+                        <div class="topic-item">Documentation & Presentation</div>
+                        <div class="topic-item">Portfolio Development</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agentic AI Curriculum Detail -->
+    <section class="curriculum-detail" id="curriculum-agentic">
+        <div class="section-container">
+            <a href="#programs" class="back-btn" onclick="showSection('programs')">← Back to Programs</a>
+            <div class="curriculum-header">
+                <div class="program-icon" style="font-size: 4rem; margin-bottom: 1rem;">🎯</div>
+                <h2>Agentic AI Curriculum</h2>
+                <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9);">
+                    Learn to build autonomous AI agents that can plan, reason, and execute complex workflows
+                </p>
+            </div>
+            
+            <div class="curriculum-modules">
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">01</div>
+                        <div class="module-title">
+                            <h3>Agent Fundamentals</h3>
+                            <p class="module-duration">Week 1-2</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Agent Architecture Patterns</div>
+                        <div class="topic-item">ReAct, Chain-of-Thought</div>
+                        <div class="topic-item">Planning & Reasoning</div>
+                        <div class="topic-item">Goal-Oriented Behavior</div>
+                        <div class="topic-item">Agent Frameworks (LangChain, CrewAI)</div>
+                        <div class="topic-item">State Management</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">02</div>
+                        <div class="module-title">
+                            <h3>Tool Integration & Function Calling</h3>
+                            <p class="module-duration">Week 3-4</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Function Calling APIs</div>
+                        <div class="topic-item">Tool Definition & Schema</div>
+                        <div class="topic-item">API Integrations</div>
+                        <div class="topic-item">Web Scraping & Automation</div>
+                        <div class="topic-item">Database Operations</div>
+                        <div class="topic-item">External Service Integration</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">03</div>
+                        <div class="module-title">
+                            <h3>Multi-Agent Systems</h3>
+                            <p class="module-duration">Week 5-6</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Agent Collaboration Patterns</div>
+                        <div class="topic-item">Task Delegation & Orchestration</div>
+                        <div class="topic-item">Inter-Agent Communication</div>
+                        <div class="topic-item">Hierarchical Agent Systems</div>
+                        <div class="topic-item">Swarm Intelligence</div>
+                        <div class="topic-item">Conflict Resolution</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">04</div>
+                        <div class="module-title">
+                            <h3>Memory Systems</h3>
+                            <p class="module-duration">Week 7-8</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Short-term vs Long-term Memory</div>
+                        <div class="topic-item">Vector Memory Stores</div>
+                        <div class="topic-item">Conversation History Management</div>
+                        <div class="topic-item">Knowledge Graphs</div>
+                        <div class="topic-item">Memory Retrieval Strategies</div>
+                        <div class="topic-item">Context Window Management</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">05</div>
+                        <div class="module-title">
+                            <h3>Autonomous Workflows</h3>
+                            <p class="module-duration">Week 9-10</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Task Planning & Decomposition</div>
+                        <div class="topic-item">Error Handling & Recovery</div>
+                        <div class="topic-item">Feedback Loops</div>
+                        <div class="topic-item">Self-Improvement Mechanisms</div>
+                        <div class="topic-item">Workflow Orchestration</div>
+                        <div class="topic-item">Performance Optimization</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">06</div>
+                        <div class="module-title">
+                            <h3>Production Agent Development</h3>
+                            <p class="module-duration">Week 11-12</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Agent Deployment Patterns</div>
+                        <div class="topic-item">Scalability & Performance</div>
+                        <div class="topic-item">Security & Safety Constraints</div>
+                        <div class="topic-item">Monitoring & Observability</div>
+                        <div class="topic-item">Cost Management</div>
+                        <div class="topic-item">Real-World Applications</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">07</div>
+                        <div class="module-title">
+                            <h3>Capstone: Build Your AI Agent</h3>
+                            <p class="module-duration">Week 13-14</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Custom Agent Development</div>
+                        <div class="topic-item">Multi-Tool Integration</div>
+                        <div class="topic-item">Production Deployment</div>
+                        <div class="topic-item">Testing & Evaluation</div>
+                        <div class="topic-item">Documentation</div>
+                        <div class="topic-item">Portfolio Presentation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full-Stack Development Curriculum Detail -->
+    <section class="curriculum-detail" id="curriculum-fullstack">
+        <div class="section-container">
+            <a href="#programs" class="back-btn" onclick="showSection('programs')">← Back to Programs</a>
+            <div class="curriculum-header">
+                <div class="program-icon" style="font-size: 4rem; margin-bottom: 1rem;">💻</div>
+                <h2>Full-Stack Development Curriculum</h2>
+                <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9);">
+                    Master modern web development from frontend to backend and everything in between
+                </p>
+            </div>
+            
+            <div class="curriculum-modules">
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">01</div>
+                        <div class="module-title">
+                            <h3>Frontend Fundamentals</h3>
+                            <p class="module-duration">Week 1-3</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">HTML5 & Semantic Markup</div>
+                        <div class="topic-item">CSS3 & Flexbox/Grid</div>
+                        <div class="topic-item">JavaScript ES6+</div>
+                        <div class="topic-item">Responsive Design</div>
+                        <div class="topic-item">DOM Manipulation</div>
+                        <div class="topic-item">Browser APIs</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">02</div>
+                        <div class="module-title">
+                            <h3>React & Modern Frameworks</h3>
+                            <p class="module-duration">Week 4-6</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">React Components & Hooks</div>
+                        <div class="topic-item">State Management (Redux, Context)</div>
+                        <div class="topic-item">TypeScript Integration</div>
+                        <div class="topic-item">Next.js & SSR</div>
+                        <div class="topic-item">Angular Framework</div>
+                        <div class="topic-item">Component Libraries</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">03</div>
+                        <div class="module-title">
+                            <h3>Backend Development - Node.js</h3>
+                            <p class="module-duration">Week 7-9</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Node.js & Express</div>
+                        <div class="topic-item">RESTful API Design</div>
+                        <div class="topic-item">Authentication & Authorization</div>
+                        <div class="topic-item">JWT & Session Management</div>
+                        <div class="topic-item">Middleware Development</div>
+                        <div class="topic-item">Error Handling</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">04</div>
+                        <div class="module-title">
+                            <h3>Backend Development - C# & .NET</h3>
+                            <p class="module-duration">Week 10-12</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">C# Language Fundamentals</div>
+                        <div class="topic-item">ASP.NET Core</div>
+                        <div class="topic-item">Web API Development</div>
+                        <div class="topic-item">Entity Framework</div>
+                        <div class="topic-item">LINQ & Data Queries</div>
+                        <div class="topic-item">Dependency Injection</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">05</div>
+                        <div class="module-title">
+                            <h3>Database Design & Management</h3>
+                            <p class="module-duration">Week 13-14</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">PostgreSQL & MySQL</div>
+                        <div class="topic-item">Database Normalization</div>
+                        <div class="topic-item">Complex Queries & Joins</div>
+                        <div class="topic-item">Indexing & Optimization</div>
+                        <div class="topic-item">Transactions & ACID</div>
+                        <div class="topic-item">NoSQL (MongoDB)</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">06</div>
+                        <div class="module-title">
+                            <h3>Testing & Quality Assurance</h3>
+                            <p class="module-duration">Week 15</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Unit Testing (Jest, Mocha)</div>
+                        <div class="topic-item">Integration Testing</div>
+                        <div class="topic-item">E2E Testing (Cypress)</div>
+                        <div class="topic-item">Test-Driven Development</div>
+                        <div class="topic-item">Code Coverage</div>
+                        <div class="topic-item">Debugging Techniques</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">07</div>
+                        <div class="module-title">
+                            <h3>Version Control & Collaboration</h3>
+                            <p class="module-duration">Week 16</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Git Fundamentals</div>
+                        <div class="topic-item">Branching Strategies</div>
+                        <div class="topic-item">Pull Requests & Code Review</div>
+                        <div class="topic-item">Agile Methodologies</div>
+                        <div class="topic-item">JIRA & Project Management</div>
+                        <div class="topic-item">Team Collaboration</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">08</div>
+                        <div class="module-title">
+                            <h3>Capstone Project</h3>
+                            <p class="module-duration">Week 17-18</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Full-Stack Application Build</div>
+                        <div class="topic-item">Frontend & Backend Integration</div>
+                        <div class="topic-item">Database Implementation</div>
+                        <div class="topic-item">Deployment & Hosting</div>
+                        <div class="topic-item">Documentation</div>
+                        <div class="topic-item">Portfolio Development</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DevOps & Cloud Curriculum Detail -->
+    <section class="curriculum-detail" id="curriculum-devops">
+        <div class="section-container">
+            <a href="#programs" class="back-btn" onclick="showSection('programs')">← Back to Programs</a>
+            <div class="curriculum-header">
+                <div class="program-icon" style="font-size: 4rem; margin-bottom: 1rem;">☁️</div>
+                <h2>DevOps & Cloud Engineering Curriculum</h2>
+                <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9);">
+                    Learn to build, deploy, and manage scalable cloud infrastructure and CI/CD pipelines
+                </p>
+            </div>
+            
+            <div class="curriculum-modules">
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">01</div>
+                        <div class="module-title">
+                            <h3>Linux & System Administration</h3>
+                            <p class="module-duration">Week 1-2</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Linux Fundamentals</div>
+                        <div class="topic-item">Shell Scripting (Bash)</div>
+                        <div class="topic-item">Process Management</div>
+                        <div class="topic-item">Networking Basics</div>
+                        <div class="topic-item">Security & Permissions</div>
+                        <div class="topic-item">System Monitoring</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">02</div>
+                        <div class="module-title">
+                            <h3>Containerization - Docker</h3>
+                            <p class="module-duration">Week 3-4</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Docker Architecture</div>
+                        <div class="topic-item">Dockerfile Creation</div>
+                        <div class="topic-item">Container Management</div>
+                        <div class="topic-item">Docker Compose</div>
+                        <div class="topic-item">Image Optimization</div>
+                        <div class="topic-item">Registry Management</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">03</div>
+                        <div class="module-title">
+                            <h3>Container Orchestration - Kubernetes</h3>
+                            <p class="module-duration">Week 5-7</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">K8s Architecture & Components</div>
+                        <div class="topic-item">Pods, Services, Deployments</div>
+                        <div class="topic-item">ConfigMaps & Secrets</div>
+                        <div class="topic-item">Persistent Storage</div>
+                        <div class="topic-item">Networking & Ingress</div>
+                        <div class="topic-item">Helm Charts</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">04</div>
+                        <div class="module-title">
+                            <h3>AWS Cloud Platform</h3>
+                            <p class="module-duration">Week 8-10</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">EC2, S3, RDS</div>
+                        <div class="topic-item">VPC & Networking</div>
+                        <div class="topic-item">IAM & Security</div>
+                        <div class="topic-item">Lambda & Serverless</div>
+                        <div class="topic-item">CloudWatch Monitoring</div>
+                        <div class="topic-item">Load Balancing & Auto-Scaling</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">05</div>
+                        <div class="module-title">
+                            <h3>Azure Cloud Platform</h3>
+                            <p class="module-duration">Week 11-12</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Azure VMs & App Services</div>
+                        <div class="topic-item">Azure SQL & Cosmos DB</div>
+                        <div class="topic-item">Azure DevOps</div>
+                        <div class="topic-item">Functions & Logic Apps</div>
+                        <div class="topic-item">Azure Monitor</div>
+                        <div class="topic-item">Resource Management</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">06</div>
+                        <div class="module-title">
+                            <h3>CI/CD Pipeline Automation</h3>
+                            <p class="module-duration">Week 13-14</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Jenkins, GitHub Actions</div>
+                        <div class="topic-item">GitLab CI/CD</div>
+                        <div class="topic-item">Pipeline Design Patterns</div>
+                        <div class="topic-item">Automated Testing Integration</div>
+                        <div class="topic-item">Deployment Strategies</div>
+                        <div class="topic-item">Rollback Mechanisms</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">07</div>
+                        <div class="module-title">
+                            <h3>Infrastructure as Code</h3>
+                            <p class="module-duration">Week 15</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Terraform Fundamentals</div>
+                        <div class="topic-item">Ansible Configuration Management</div>
+                        <div class="topic-item">CloudFormation</div>
+                        <div class="topic-item">State Management</div>
+                        <div class="topic-item">Modules & Reusability</div>
+                        <div class="topic-item">Version Control for IaC</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">08</div>
+                        <div class="module-title">
+                            <h3>Monitoring & Security</h3>
+                            <p class="module-duration">Week 16</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Prometheus & Grafana</div>
+                        <div class="topic-item">ELK Stack (Logging)</div>
+                        <div class="topic-item">Security Best Practices</div>
+                        <div class="topic-item">Vulnerability Scanning</div>
+                        <div class="topic-item">Incident Response</div>
+                        <div class="topic-item">Compliance & Auditing</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">09</div>
+                        <div class="module-title">
+                            <h3>Capstone: Production Infrastructure</h3>
+                            <p class="module-duration">Week 17-18</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Multi-tier Application Deploy</div>
+                        <div class="topic-item">Full CI/CD Implementation</div>
+                        <div class="topic-item">IaC for Complete Stack</div>
+                        <div class="topic-item">Monitoring & Alerting Setup</div>
+                        <div class="topic-item">Documentation & Runbooks</div>
+                        <div class="topic-item">Portfolio Development</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full-Stack C# Curriculum Detail -->
+    <section class="curriculum-detail" id="curriculum-fullstack-csharp">
+        <div class="section-container">
+            <a href="#programs" class="back-btn" onclick="showSection('programs')">← Back to Programs</a>
+            <div class="curriculum-header">
+                <div class="program-icon" style="font-size: 4rem; margin-bottom: 1rem;">🔷</div>
+                <h2>Full-Stack C# Development Curriculum</h2>
+                <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9);">
+                    Master enterprise-grade .NET applications with C# from backend to frontend
+                </p>
+            </div>
+            
+            <div class="curriculum-modules">
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">01</div>
+                        <div class="module-title">
+                            <h3>C# Programming Fundamentals</h3>
+                            <p class="module-duration">Week 1-2</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">C# Syntax & Data Types</div>
+                        <div class="topic-item">OOP Principles</div>
+                        <div class="topic-item">Collections & Generics</div>
+                        <div class="topic-item">Exception Handling</div>
+                        <div class="topic-item">LINQ Fundamentals</div>
+                        <div class="topic-item">Async/Await Programming</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">02</div>
+                        <div class="module-title">
+                            <h3>.NET Core & ASP.NET Core</h3>
+                            <p class="module-duration">Week 3-5</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">.NET Core Architecture</div>
+                        <div class="topic-item">Dependency Injection</div>
+                        <div class="topic-item">Middleware Pipeline</div>
+                        <div class="topic-item">Configuration Management</div>
+                        <div class="topic-item">Logging & Monitoring</div>
+                        <div class="topic-item">ASP.NET Core MVC</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">03</div>
+                        <div class="module-title">
+                            <h3>Web API Development</h3>
+                            <p class="module-duration">Week 6-7</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">RESTful API Design</div>
+                        <div class="topic-item">API Controllers & Routing</div>
+                        <div class="topic-item">Model Validation</div>
+                        <div class="topic-item">Authentication & JWT</div>
+                        <div class="topic-item">API Documentation (Swagger)</div>
+                        <div class="topic-item">Versioning & Best Practices</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">04</div>
+                        <div class="module-title">
+                            <h3>Entity Framework Core</h3>
+                            <p class="module-duration">Week 8-9</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Code-First & Database-First</div>
+                        <div class="topic-item">DbContext & DbSet</div>
+                        <div class="topic-item">Migrations & Seeding</div>
+                        <div class="topic-item">LINQ to Entities</div>
+                        <div class="topic-item">Relationships & Navigation</div>
+                        <div class="topic-item">Performance Optimization</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">05</div>
+                        <div class="module-title">
+                            <h3>Frontend with Blazor</h3>
+                            <p class="module-duration">Week 10-12</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Blazor Server & WebAssembly</div>
+                        <div class="topic-item">Component Development</div>
+                        <div class="topic-item">Data Binding & Events</div>
+                        <div class="topic-item">Forms & Validation</div>
+                        <div class="topic-item">JavaScript Interop</div>
+                        <div class="topic-item">State Management</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">06</div>
+                        <div class="module-title">
+                            <h3>Testing & Quality</h3>
+                            <p class="module-duration">Week 13</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Unit Testing (xUnit, NUnit)</div>
+                        <div class="topic-item">Integration Testing</div>
+                        <div class="topic-item">Mocking with Moq</div>
+                        <div class="topic-item">Test-Driven Development</div>
+                        <div class="topic-item">Code Coverage</div>
+                        <div class="topic-item">Continuous Testing</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">07</div>
+                        <div class="module-title">
+                            <h3>Azure Cloud Integration</h3>
+                            <p class="module-duration">Week 14-15</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Azure App Services</div>
+                        <div class="topic-item">Azure SQL Database</div>
+                        <div class="topic-item">Azure Functions</div>
+                        <div class="topic-item">Azure Storage</div>
+                        <div class="topic-item">Application Insights</div>
+                        <div class="topic-item">Azure DevOps CI/CD</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">08</div>
+                        <div class="module-title">
+                            <h3>Capstone Project</h3>
+                            <p class="module-duration">Week 16-18</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Full-Stack .NET Application</div>
+                        <div class="topic-item">Blazor Frontend</div>
+                        <div class="topic-item">Web API Backend</div>
+                        <div class="topic-item">Entity Framework Integration</div>
+                        <div class="topic-item">Azure Deployment</div>
+                        <div class="topic-item">Portfolio Presentation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QA & QE Curriculum Detail -->
+    <section class="curriculum-detail" id="curriculum-qa">
+        <div class="section-container">
+            <a href="#programs" class="back-btn" onclick="showSection('programs')">← Back to Programs</a>
+            <div class="curriculum-header">
+                <div class="program-icon" style="font-size: 4rem; margin-bottom: 1rem;">✅</div>
+                <h2>Quality Assurance & Quality Engineering Curriculum</h2>
+                <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9);">
+                    Master software testing methodologies and quality engineering practices
+                </p>
+            </div>
+            
+            <div class="curriculum-modules">
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">01</div>
+                        <div class="module-title">
+                            <h3>Software Testing Fundamentals</h3>
+                            <p class="module-duration">Week 1-2</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Testing Principles & Concepts</div>
+                        <div class="topic-item">SDLC & STLC</div>
+                        <div class="topic-item">Test Planning & Strategy</div>
+                        <div class="topic-item">Test Design Techniques</div>
+                        <div class="topic-item">Defect Management</div>
+                        <div class="topic-item">Testing Documentation</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">02</div>
+                        <div class="module-title">
+                            <h3>Manual Testing</h3>
+                            <p class="module-duration">Week 3-4</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Functional Testing</div>
+                        <div class="topic-item">UI/UX Testing</div>
+                        <div class="topic-item">Exploratory Testing</div>
+                        <div class="topic-item">Regression Testing</div>
+                        <div class="topic-item">Test Case Creation</div>
+                        <div class="topic-item">Bug Reporting & Tracking</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">03</div>
+                        <div class="module-title">
+                            <h3>Test Automation Fundamentals</h3>
+                            <p class="module-duration">Week 5-6</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Automation Strategy</div>
+                        <div class="topic-item">Programming for Testers (Python/Java)</div>
+                        <div class="topic-item">Test Framework Design</div>
+                        <div class="topic-item">Page Object Model</div>
+                        <div class="topic-item">Data-Driven Testing</div>
+                        <div class="topic-item">Keyword-Driven Testing</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">04</div>
+                        <div class="module-title">
+                            <h3>Selenium WebDriver</h3>
+                            <p class="module-duration">Week 7-9</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Selenium Architecture</div>
+                        <div class="topic-item">Web Element Interaction</div>
+                        <div class="topic-item">Waits & Synchronization</div>
+                        <div class="topic-item">Handling Alerts & Frames</div>
+                        <div class="topic-item">Cross-Browser Testing</div>
+                        <div class="topic-item">TestNG & JUnit Integration</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">05</div>
+                        <div class="module-title">
+                            <h3>Modern Test Frameworks</h3>
+                            <p class="module-duration">Week 10-11</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Cypress for Web Testing</div>
+                        <div class="topic-item">Playwright Automation</div>
+                        <div class="topic-item">Mobile Testing (Appium)</div>
+                        <div class="topic-item">Component Testing</div>
+                        <div class="topic-item">Visual Regression Testing</div>
+                        <div class="topic-item">Accessibility Testing</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">06</div>
+                        <div class="module-title">
+                            <h3>API Testing</h3>
+                            <p class="module-duration">Week 12-13</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">REST API Testing</div>
+                        <div class="topic-item">Postman & Newman</div>
+                        <div class="topic-item">RestAssured Framework</div>
+                        <div class="topic-item">API Automation</div>
+                        <div class="topic-item">GraphQL Testing</div>
+                        <div class="topic-item">API Security Testing</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">07</div>
+                        <div class="module-title">
+                            <h3>Performance & Load Testing</h3>
+                            <p class="module-duration">Week 14</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Performance Testing Concepts</div>
+                        <div class="topic-item">JMeter & K6</div>
+                        <div class="topic-item">Load & Stress Testing</div>
+                        <div class="topic-item">Performance Metrics</div>
+                        <div class="topic-item">Bottleneck Analysis</div>
+                        <div class="topic-item">Performance Reporting</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">08</div>
+                        <div class="module-title">
+                            <h3>CI/CD & DevOps for QA</h3>
+                            <p class="module-duration">Week 15</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">Jenkins for Test Automation</div>
+                        <div class="topic-item">GitHub Actions</div>
+                        <div class="topic-item">Docker for Testing</div>
+                        <div class="topic-item">Continuous Testing</div>
+                        <div class="topic-item">Test Reporting & Analytics</div>
+                        <div class="topic-item">Quality Metrics & KPIs</div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">09</div>
+                        <div class="module-title">
+                            <h3>Capstone Testing Project</h3>
+                            <p class="module-duration">Week 16-18</p>
+                        </div>
+                    </div>
+                    <div class="module-topics">
+                        <div class="topic-item">End-to-End Test Framework</div>
+                        <div class="topic-item">Manual & Automated Testing</div>
+                        <div class="topic-item">API & UI Test Suite</div>
+                        <div class="topic-item">CI/CD Pipeline Integration</div>
+                        <div class="topic-item">Test Reports & Documentation</div>
+                        <div class="topic-item">Portfolio Development</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include original curriculum sections for LLM, Agentic, Full-Stack, and DevOps here -->
+    <!-- (Keeping them from original code for brevity) -->
+
+    <!-- Companies Grid -->
+    <section class="companies" id="companies">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">Hiring Partners</div>
+                <h2>Companies That Hired Our Graduates</h2>
+                <p>
+                    Leading organizations across Africa and globally trust Future Labs Africa 
+                    graduates to drive their technology initiatives.
+                </p>
+            </div>
+            <div class="companies-grid">
+                <div class="company-logo"><span>Microsoft</span></div>
+                <div class="company-logo"><span>Safaricom</span></div>
+                <div class="company-logo"><span>Equity Bank</span></div>
+                <div class="company-logo"><span>Absa Bank</span></div>
+                <div class="company-logo"><span>Stanbic Bank</span></div>
+                <div class="company-logo"><span>NCBA Group</span></div>
+                <div class="company-logo"><span>United Nations</span></div>
+                <div class="company-logo"><span>Braintrust</span></div>
+                <div class="company-logo"><span>KETRACO</span></div>
+                <div class="company-logo"><span>Stellantis</span></div>
+                <div class="company-logo"><span>Kyosk</span></div>
+                <div class="company-logo"><span>Workpay</span></div>
+                <div class="company-logo"><span>Cerebri AI</span></div>
+                <div class="company-logo"><span>Paystey</span></div>
+                <div class="company-logo"><span>Pesaflow</span></div>
+                <div class="company-logo"><span>BitNorm</span></div>
+                <div class="company-logo"><span>Cloudoon</span></div>
+                <div class="company-logo"><span>Systech</span></div>
+                <div class="company-logo"><span>BRINKS</span></div>
+                <div class="company-logo"><span>Franklin Street</span></div>
+                <div class="company-logo"><span>Evidence Action</span></div>
+                <div class="company-logo"><span>EldoHub</span></div>
+                <div class="company-logo"><span>eMobilis</span></div>
+                <div class="company-logo"><span>Forage</span></div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; color: var(--text-light); font-size: 1.1rem;">
+                <strong>And 75+ more companies</strong> including Agnipank Energy, CreativeGeeks, 
+                Nathan Digital, Serianu, and many others across diverse industries.
+            </p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">Our Leadership</div>
+                <h2>Meet the Team</h2>
+                <p>
+                    Experienced leaders committed to nurturing Africa's tech talent and 
+                    driving digital transformation across the continent.
+                </p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="director.JPG" alt="Captain John Mukoma" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="team-photo-placeholder" style="display: none;">JM</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Captain John Mukoma</h3>
+                        <div class="team-role">Director</div>
+                        <p>
+                            Provides independent leadership to the board, coordinates board activities, 
+                            and ensures effective governance and oversight.
+                        </p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="ceo.jpeg" alt="Jonathan Ndambuki" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="team-photo-placeholder" style="display: none;">JN</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Jonathan Ndambuki</h3>
+                        <div class="team-role">Chief Executive Officer</div>
+                        <p>
+                            Provides strategic leadership, drives growth, and ensures the company's 
+                            vision is executed effectively across all operations.
+                        </p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="md.JPG" alt="Allan Maina Mwangi" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="team-photo-placeholder" style="display: none;">AM</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Allan Maina Mwangi</h3>
+                        <div class="team-role">Managing Director</div>
+                        <p>
+                            Oversees day-to-day operations, implements company strategy, and ensures 
+                            business objectives are achieved efficiently.
+                        </p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="tm.JPG" alt="Daniel Kitheka" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="team-photo-placeholder" style="display: none;">DK</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Daniel Kitheka</h3>
+                        <div class="team-role">Head of Training</div>
+                        <p>
+                            Leads staff development by designing, implementing, and overseeing training 
+                            programs to build skills and boost performance.
+                        </p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="sm.png" alt="John Weru Kairu" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="team-photo-placeholder" style="display: none;">JW</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>John Weru Kairu</h3>
+                        <div class="team-role">Graphic Designer / Media</div>
+                        <p>
+                            Responsible for creating visual and multimedia content that reflects our brand, 
+                            supports communication goals, and engages our audience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment Form -->
+    <section class="enrollment" id="enrollment">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">Get Started</div>
+                <h2>Partner With Us or Enroll Today</h2>
+                <p>
+                    Whether you're looking to hire exceptional talent or join our next training cohort, 
+                    we're here to help. Fill out the form below and we'll get in touch.
+                </p>
+            </div>
+            <div class="form-container">
+                <form id="enrollmentForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="organization">Organization / Company</label>
+                            <input type="text" id="organization" name="organization">
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">I'm Interested In *</label>
+                            <select id="interest" name="interest" required>
+                                <option value="">Select an option</option>
+                                <option value="hire">Hiring Graduates</option>
+                                <option value="partner">Partnership Opportunities</option>
+                                <option value="enroll-llm">Enrolling in LLM Engineering</option>
+                                <option value="enroll-agentic">Enrolling in Agentic AI</option>
+                                <option value="enroll-fullstack">Enrolling in Full-Stack Development</option>
+                                <option value="enroll-fullstack-csharp">Enrolling in Full-Stack C#</option>
+                                <option value="enroll-devops">Enrolling in DevOps & Cloud</option>
+                                <option value="enroll-qa">Enrolling in QA & QE</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us more about your needs or questions..."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>FUTURE LABS AFRICA</h3>
+                <p>
+                    Equip Talent, Shape Tomorrow. We are shaping the next generation of African AI and tech 
+                    talent through world-class training, innovation, and digital empowerment.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#programs" onclick="showSection('programs')">Programs</a></li>
+                    <li><a href="#collaboration" onclick="showSection('collaboration')">Collaborations</a></li>
+                    <li><a href="#companies">Our Partners</a></li>
+                    <li><a href="#team">Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Programs</h3>
+                <ul>
+                    <li><a href="#" onclick="showCurriculum('llm')">LLM Engineering</a></li>
+                    <li><a href="#" onclick="showCurriculum('agentic')">Agentic AI</a></li>
+                    <li><a href="#" onclick="showCurriculum('fullstack')">Full-Stack Development</a></li>
+                    <li><a href="#" onclick="showCurriculum('fullstack-csharp')">Full-Stack C#</a></li>
+                    <li><a href="#" onclick="showCurriculum('devops')">DevOps & Cloud</a></li>
+                    <li><a href="#" onclick="showCurriculum('qa')">QA & QE</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="573122232225323b3635243631253e343617303a363e3b7934383a">[email&#160;protected]</a></li>
+                    <li>📱 +254 713 182853</li>
+                    <li>📍 Nairobi, Kenya</li>
+                    <li>@futurelabsafrica</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Future Labs Africa. All rights reserved. | Nurturing minds for a brighter future and endless possibilities.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Navigation
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            navLinks.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+                document.querySelector('.mobile-menu-toggle').classList.remove('active');
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Section Management
+        function showSection(sectionId) {
+            // Hide all curriculum details
+            document.querySelectorAll('.curriculum-detail').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show relevant sections
+            const programsSection = document.querySelector('.programs-overview');
+            const collaborationSection = document.querySelector('.collaboration');
+            
+            if (sectionId === 'programs') {
+                programsSection.style.display = 'block';
+                collaborationSection.style.display = 'none';
+            } else if (sectionId === 'collaboration') {
+                programsSection.style.display = 'none';
+                collaborationSection.style.display = 'block';
+            } else if (sectionId === 'home') {
+                programsSection.style.display = 'block';
+                collaborationSection.style.display = 'block';
+            }
+        }
+
+        function showCurriculum(programId) {
+            // Hide programs overview and collaboration
+            document.querySelector('.programs-overview').style.display = 'none';
+            document.querySelector('.collaboration').style.display = 'none';
+            
+            // Hide all curriculum details
+            document.querySelectorAll('.curriculum-detail').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected curriculum
+            const curriculumSection = document.getElementById(`curriculum-${programId}`);
+            if (curriculumSection) {
+                curriculumSection.classList.add('active');
+                curriculumSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#') && !this.hasAttribute('onclick')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const navHeight = document.getElementById('navbar').offsetHeight;
+                        const targetPosition = target.offsetTop - navHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            console.log('Form submitted:', data);
+            alert('Thank you for your interest! We will contact you shortly.');
+            event.target.reset();
+        }
+
+        // Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        });
+
+        // Counter animation
+        function animateCounter(element, target, duration = 2000) {
+            const increment = target / (duration / 16);
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target.toLocaleString() + '+';
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString() + '+';
+                }
+            }, 16);
+        }
+
