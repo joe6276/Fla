@@ -1,4 +1,5 @@
-// Navigation
+
+
 function toggleMobileMenu() {
     const navLinks = document.getElementById('navLinks');
     const toggle = document.querySelector('.mobile-menu-toggle');
@@ -14,7 +15,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const navbar = document.getElementById('navbar');
     navbar.classList.toggle('scrolled', window.scrollY > 50);
 });
@@ -25,11 +26,11 @@ function showSection(sectionId) {
     document.querySelectorAll('.curriculum-detail').forEach(section => {
         section.classList.remove('active');
     });
-    
+
     // Show relevant sections
     const programsSection = document.querySelector('.programs-overview');
     const collaborationSection = document.querySelector('.collaboration');
-    
+
     if (sectionId === 'programs') {
         programsSection.style.display = 'block';
         collaborationSection.style.display = 'none';
@@ -46,12 +47,12 @@ function showCurriculum(programId) {
     // Hide programs overview and collaboration
     document.querySelector('.programs-overview').style.display = 'none';
     document.querySelector('.collaboration').style.display = 'none';
-    
+
     // Hide all curriculum details
     document.querySelectorAll('.curriculum-detail').forEach(section => {
         section.classList.remove('active');
     });
-    
+
     // Show selected curriculum
     const curriculumSection = document.getElementById(`curriculum-${programId}`);
     if (curriculumSection) {
@@ -112,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function animateCounter(element, target, duration = 2000) {
     const increment = target / (duration / 16);
     let current = 0;
-    
+
     const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
@@ -142,3 +143,69 @@ const heroStats = document.querySelector('.hero-stats');
 if (heroStats) {
     statsObserver.observe(heroStats);
 }
+
+
+
+async function handleFormSubmit(event) {
+    event.preventDefault()
+
+    const form = event.target;
+     
+  const submitBtn = form.querySelector(".submit-btn");
+  const msgBox = document.getElementById("formMessage");
+
+  // Hide any previous message
+  msgBox.style.display = "none";
+
+    const payload = {
+        first_name: form.firstName.value.trim(),
+        last_name: form.lastName.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim(),
+        organization: form.organization.value.trim() || "—",
+        interest: form.interest.value,
+        message: form.message.value.trim() || "—",
+    };
+
+submitBtn.disabled = true;
+  submitBtn.textContent = "Sending…";
+
+  try {
+    const response = await fetch("https://fla-backend-f150.onrender.com/api/inquiry", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    const result = await response.json();
+
+    if (response.ok && result.success) {
+      // ✅ Success message
+      msgBox.style.display = "block";
+      msgBox.style.background = "#d1fae5";
+      msgBox.style.color = "#065f46";
+      msgBox.style.border = "1px solid #6ee7b7";
+      msgBox.textContent = "✅ Your inquiry has been sent! We'll get back to you soon.";
+      form.reset();
+    } else {
+      throw new Error(result.error || "Something went wrong.");
+    }
+  } catch (err) {
+    // ❌ Error message
+    console.log(err);
+    
+    msgBox.style.display = "block";
+    msgBox.style.background = "#fee2e2";
+    msgBox.style.color = "#991b1b";
+    msgBox.style.border = "1px solid #fca5a5";
+    msgBox.textContent = "❌ Failed to send your inquiry. Please try again.";
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Submit Inquiry";
+  } 
+
+
+}
+
+
+
