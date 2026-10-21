@@ -42,7 +42,7 @@ export default function Home() {
 
             <div className="hero__visual">
               <div className="hero__photo">
-                <Image src="/images/hero-trainer.jpg" alt="A Future Labs trainer guiding a student at a computer" fill priority sizes="(max-width: 900px) 100vw, 560px" />
+                <Image src="/images/hero-trainer-bright.jpg" alt="A Future Labs trainer guiding a student at a computer" fill priority sizes="(max-width: 900px) 100vw, 560px" />
               </div>
               <div className="stat-block">
                 <strong>
